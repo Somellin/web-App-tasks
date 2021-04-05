@@ -7,7 +7,7 @@ export function renderPosts(post, options = {}) {
       const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
       const candidate = favorites.find((p) => p.id === post.id);
       const button = candidate
-        ? `<button class="button-round button-small button-danger" data-id="${post.id} data-title="${post.title}">Удалить</button>`
+        ? `<button class="button-round button-small button-danger" data-id="${post.id}" data-title="${post.title}">Удалить</button>`
         : `<button class="button-round button-small button-primary" data-id="${post.id}" data-title="${post.title}">Сохранить</button>`;
 
   return `
